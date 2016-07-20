@@ -1,6 +1,6 @@
 # What is this image?
 
-The image contains a package of pre-installed `nginx (1.8.0) + php-fpm (5.6.8) + mysql (5.6.24)`. It can be used as 
+The image contains a package of pre-installed `nginx (1.8.0) + php-fpm (7) + mysql (5.6.24)`. It can be used as 
 a php development server, as a substitution for Vagrant VirtualBox provider
 
 ## Features:
@@ -41,7 +41,7 @@ Other variant is to update `/etc/hosts` manually, each time adding something lik
 First of all you need install [Docker](https://www.docker.com/) on your machine. All command need run as root or you
 need add your user to docker group.
 
-    docker run --name dev-server -p 127.0.0.1:80:80 -v /opt/mysql:/var/lib/mysql -v /var/www:/web -d metalguardian/php-web-server
+    docker run --name dev-server -p 127.0.0.1:80:80 -v /opt/mysql:/var/lib/mysql -v /var/www:/web -d didux1/php-web-server
 
 `--name dev-server` set container name, for simple access to it in the future: you can start, restart and 
 stop the created container using its name: `docker start dev-server`

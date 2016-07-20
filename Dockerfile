@@ -26,8 +26,7 @@ RUN \
 	echo "deb http://repo.mysql.com/apt/ubuntu/ $(lsb_release -cs) mysql-${MYSQL_MAJOR}" > /etc/apt/sources.list.d/mysql.list && \
 
 # add ondrej php repository
-	apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 14AA40EC0831756756D7F66C4F4EA0AAE5267A6C && \
-	echo "deb http://ppa.launchpad.net/ondrej/php5-5.6/ubuntu trusty main" > /etc/apt/sources.list.d/php.list && \
+	echo "deb http://ppa.launchpad.net/ondrej/php" > /etc/apt/sources.list.d/php.list && \
 
 # update
 	apt-get update && \
@@ -47,20 +46,20 @@ RUN \
 		wget \
 		git \
 		sqlite3 \
-		php5-fpm \
-		php5-cli \
-		php5-mysql \
-		php5-curl \
-		php5-gd \
-		php5-intl \
-		php5-imagick \
-		php5-mcrypt \
-		php5-memcached \
-		php5-json \
+		php7.0-fpm \
+		php7.0-cli \
+		php7.0-mysql \
+		php7.0-curl \
+		php7.0-gd \
+		php7.0-intl \
+		php7.0-imagick \
+		php7.0-mcrypt \
+		php7.0-memcached \
+		php7.0-json \
 		php-pear \
-		php5-dev \
-		php5-xdebug \
-		php5-sqlite \
+		php7.0-dev \
+		php7.0-xdebug \
+		php7.0-sqlite \
 		phpmyadmin \
 		unzip \
 		nodejs \

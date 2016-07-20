@@ -1,7 +1,7 @@
 # Что это то за образ?
 
 Образ представляет собой набор для быстрой и удобной разработки сайтов на предустановленых
-`nginx (1.8.0) + php-fpm (5.6.8) + mysql (5.6.24)`. Контейнер можно использовать как замену vagrant 
+`nginx (1.8.0) + php-fpm (7) + mysql (5.6.24)`. Контейнер можно использовать как замену vagrant 
 (или как замену провайдера virtualbox на docker).
 
 ## Особенности:
@@ -40,7 +40,7 @@
 Предварительно нужно установить [Docker](https://www.docker.com/) у себя на машине. Все команды нужно запускать от 
 `root` или добавить своего пользователя в группу docker. 
 
-    docker run --name dev-server -p 127.0.0.1:80:80 -v /opt/mysql:/var/lib/mysql -v /var/www:/web -d metalguardian/php-web-server
+    docker run --name dev-server -p 127.0.0.1:80:80 -v /opt/mysql:/var/lib/mysql -v /var/www:/web -d didux1/php-web-server
 
 `--name dev-server` устанавливает имя контейнеру, с помощью него в будущем можно будет управлять контенером, 
 можно стартовать, останавливать, перезапускать контейнер по его имени: `docker start dev-server`
