@@ -25,9 +25,7 @@ RUN \
 	apt-key adv --keyserver pool.sks-keyservers.net --recv-keys A4A9406876FCBD3C456770C88C718D3B5072E1F5 && \
 	echo "deb http://repo.mysql.com/apt/ubuntu/ $(lsb_release -cs) mysql-${MYSQL_MAJOR}" > /etc/apt/sources.list.d/mysql.list && \
 
-# add ondrej php repository
-	echo "deb http://ppa.launchpad.net/ondrej/php" > /etc/apt/sources.list.d/php.list && \
-
+    add-apt-repository ppa:ondrej/php  && \
 # update
 	apt-get update && \
 
